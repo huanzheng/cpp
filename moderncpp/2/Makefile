@@ -1,8 +1,8 @@
 
-all: constants constexpr ifinitial initializer_list structured_binding auto decltype returnauto if_constexpr range_loop typedef_using variadic_template variadic_recursive_template
+all: constants constexpr ifinitial initializer_list structured_binding auto decltype returnauto if_constexpr range_loop typedef_using variadic_template variadic_recursive_template none_type_template delegate_constructor simple_virtual
 
 clean:
-	rm constants constexpr ifinitial initializer_list structured_binding auto decltype returnauto if_constexpr range_loop typedef_using variadic_template variadic_recursive_template
+	rm constants constexpr ifinitial initializer_list structured_binding auto decltype returnauto if_constexpr range_loop typedef_using variadic_template variadic_recursive_template none_type_template delegate_constructor simple_virtual
 constants: constants.cpp
 	clang++ constants.cpp -std=c++14 -o constants
 constexpr: constexpr.cpp
@@ -29,4 +29,10 @@ variadic_template: variadic_template.cpp
 	clang++ variadic_template.cpp -std=c++14 -o variadic_template
 variadic_recursive_template: variadic_recursive_template.cpp
 	clang++ variadic_recursive_template.cpp -std=c++14 -o variadic_recursive_template
+none_type_template: none_type_template.cpp
+	clang++ none_type_template.cpp -std=c++14 -o none_type_template
 
+delegate_constructor: delegate_constructor.cpp
+	clang++ delegate_constructor.cpp -std=c++14 -o delegate_constructor
+simple_virtual: simple_virtual.cpp
+	clang++ simple_virtual.cpp -std=c++14 -o simple_virtual
