@@ -70,8 +70,9 @@ void only_accept_lvalue(A &&a)
     int c = b;
     return;
 }
-void only_accept_rvalue(A &&)
+void only_accept_rvalue(A &&a)
 {
+    A obj((a));
     std::cout<< "rrrrrrrrrrr" << std::endl;
     int b = 0;
     int c = b;
